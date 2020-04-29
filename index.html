@@ -8,6 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <style>
+        .list-group-item{
+            display:flex;
+            justify-content: space-between;
+        }
+    </style>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -29,6 +35,7 @@
     <div class="container my-5">
         <div class="row col">
             <form>
+                <input type="hidden" value="" id="current-event" />
                 <div class="form-group">
                   <label for="name">Name of the event</label>
                   <input type="text" class="form-control" id="name" placeholder="Name of the event">
