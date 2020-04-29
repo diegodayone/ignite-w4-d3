@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+     
+
+    <div class="container my-5">
+        <h1>Backoffice for events</h1>
+        <div class="row">
+            <ul class="list-group col" id="current-events">
+                <!-- <li class="list-group-item disabled" aria-disabled="true">Cras justo odio</li> -->
+                <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li> -->
+            </ul>
+        </div>
+    </div>
+  
+    <div class="container my-5">
+        <div class="row col">
+            <form>
+                <div class="form-group">
+                  <label for="name">Name of the event</label>
+                  <input type="text" class="form-control" id="name" placeholder="Name of the event">
+                </div>
+                <div class="form-group">
+                    <label for="description">Event description</label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" class="form-control" id="price" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="date" placeholder="">
+                  </div>
+                  <div class="form-group">
+                      <input type="button" value="Create Event" id="create-button" class="btn btn-success"/>
+                </div>
+              </form>
+        </div>
+    </div>
+
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="index.js"></script>
+
+    <script>
+        window.onload = async () => {
+            document.querySelector("#create-button").addEventListener("click", createEvent)
+
+            await loadEvents()
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
